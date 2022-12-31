@@ -1,0 +1,1328 @@
+{
+	"info": {
+		"_postman_id": "dc471687-59b5-412a-9042-1926215ace9b",
+		"name": "E-commerce Node.js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19953516"
+	},
+	"item": [
+		{
+			"name": "Website",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ahmed Wael\",\r\n    \"email\": \"amr.sameeh200@gmail.com\",\r\n    \"password\": \"12341234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ahmed.wael7822@gmail.com\",\r\n    \"password\": \"12341234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forget-password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ahmed.wael7822@gmail.com\",\r\n    \"base_url\": \"www.bl7.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\forget-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"forget-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset-Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"aaaaaaaaaaaaaaaa\",\r\n    \"email\": \"ahmed.wael7822@gmail.com\",\r\n    \"password\": \"1234512345\",\r\n    \"password_confimation\": \"1234512345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\reset-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product_website",
+					"item": [
+						{
+							"name": "All Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Some Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\products\\product\\23",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"product",
+										"23"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart Website",
+					"item": [
+						{
+							"name": "All Cart Items for authenticated user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\carts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Cart Item",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\carts\\delete\\34324234",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"carts",
+										"delete",
+										"34324234"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "new Cart Item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"\",\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\carts\\store",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"carts",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Cart Item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"item_id\": \"\",\r\n    \"quantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\carts\\update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"carts",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coupons",
+					"item": [
+						{
+							"name": "Random Coupon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\coupons\\random-coupon",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"coupons",
+										"random-coupon"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\users\\profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ahmed Ali\",\r\n    \"email\": \"ahmed.wael7822@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\users\\update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "All Orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\orders\\",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"orders",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Some Order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\orders\\231231231",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"orders",
+										"231231231"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"1231231232\",\r\n    \"quantity\": 3,\r\n    \"coupon_code\": \"HAO123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\orders\\store",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"orders",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"1231231232\",\r\n    \"quantity\": 3,\r\n    \"coupon_code\": \"HAO123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\orders\\delete\\3232232",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"orders",
+										"delete",
+										"3232232"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rates",
+					"item": [
+						{
+							"name": "Get Product Rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\rates\\:product_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rates",
+										":product_id"
+									],
+									"variable": [
+										{
+											"key": "product_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Product Rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}\\rates\\user\\:product_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rates",
+										"user",
+										":product_id"
+									],
+									"variable": [
+										{
+											"key": "product_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Rate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"asdsdasdd\",\r\n    \"rate\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}\\rates\\store",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rates",
+										"store"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Super Admin control on admin",
+					"item": [
+						{
+							"name": "All admins",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}",
+									"host": [
+										"{{admin_url}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Some Admin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\admin\\:admin_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"admin",
+										":admin_id"
+									],
+									"variable": [
+										{
+											"key": "admin_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add new Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"sub admin\",\r\n    \"email\": \"sub@admin.com\",\r\n    \"password\": \"12341234\",\r\n    \"role\": 0 \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\store",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"admin_id\": \"1111212\",\r\n    \"name\": \"sub admin\",\r\n    \"email\": \"sub@admin.com\",\r\n    \"password\": \"12341234\",\r\n    \"role\": 0 \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\update",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Admin",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"admin_id\": \"1111212\",\r\n    \"name\": \"sub admin\",\r\n    \"email\": \"sub@admin.com\",\r\n    \"password\": \"12341234\",\r\n    \"role\": 0 \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\delete\\:admin_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"delete",
+										":admin_id"
+									],
+									"variable": [
+										{
+											"key": "admin_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Edit Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Admin",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "admin@admin.com",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{admin_url}}\\profile\\update",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"profile",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\profile",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ahmed.wael7822@gmail.com\",\r\n    \"password\": \"12341234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\\\login",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forget-password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ahmed.wael7822@gmail.com\",\r\n    \"base_url\": \"www.bl7.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\forget-password",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"forget-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset-Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"aaaaaaaaaaaaaaaa\",\r\n    \"email\": \"ahmed.wael7822@gmail.com\",\r\n    \"password\": \"1234512345\",\r\n    \"password_confimation\": \"1234512345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\reset-password",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coupons",
+					"item": [
+						{
+							"name": "All Coupons",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\coupons",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"coupons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Some Coupon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\coupons\\coupon\\:coupon_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"coupons",
+										"coupon",
+										":coupon_id"
+									],
+									"variable": [
+										{
+											"key": "coupon_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Coupon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"HAO123\",\r\n    \"value\": 10,\r\n    \"percentage\": true,\r\n    \"expire\": \"10/1/2023\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\coupons\\store",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"coupons",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Coupon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"coupon_id\": \"sasasas\",\r\n    \"code\": \"HAO123\",\r\n    \"value\": 10,\r\n    \"percentage\": true,\r\n    \"expire\": \"10/1/2023\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\coupons\\update",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"coupons",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Expire Coupon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\coupons\\expire\\:coupon_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"coupons",
+										"expire",
+										":coupon_id"
+									],
+									"variable": [
+										{
+											"key": "coupon_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Coupon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\coupons\\delete\\:coupon_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"coupons",
+										"delete",
+										":coupon_id"
+									],
+									"variable": [
+										{
+											"key": "coupon_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Inventory",
+					"item": [
+						{
+							"name": "New Inventory Income",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"232323232\",\r\n    \"quantity\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\inventory\\add",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"inventory",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Inventory outcome",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": \"232323232\",\r\n    \"quantity\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\inventory\\remove",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"inventory",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "All Orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\orders",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Some Order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\orders\\order\\:order_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"orders",
+										"order",
+										":order_id"
+									],
+									"variable": [
+										{
+											"key": "order_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Order Status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_id\": \"dasasa\",\r\n    \"status\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\orders\\order\\status",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"orders",
+										"order",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "All Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\products\\",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"products",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Some Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\products\\product\\:product_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"products",
+										"product",
+										":product_id"
+									],
+									"variable": [
+										{
+											"key": "product_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Product 10",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "this is a product",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{admin_url}}\\products\\store",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"products",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Product 10",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "THIS IS A PRODUCT",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "product_id",
+											"value": "saffdfsdfsd",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "12",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{admin_url}}\\products\\update",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"products",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{admin_url}}\\products\\delete\\:product_id",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"products",
+										"delete",
+										":product_id"
+									],
+									"variable": [
+										{
+											"key": "product_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Updata Balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"2ee2ewedw\",\r\n    \"balance\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\users\\balance",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"users",
+										"balance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"2ee2ewedw\",\r\n    \"banned\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin_url}}\\users\\status",
+									"host": [
+										"{{admin_url}}"
+									],
+									"path": [
+										"users",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}

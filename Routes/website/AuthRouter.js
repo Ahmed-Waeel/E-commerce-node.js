@@ -2,7 +2,7 @@ const app = require('express')
 const router = app.Router()
 const { login, register } = require('./../../Controllers/website/AuthController')
 const { forgetPassword, resetPassword } = require('./../../Controllers/website/forgetPasswordController')
-const { mustBeGuest } = require('../../Middlewares/guestMiddleware')
+const { mustBeGuest } = require('./../../Middlewares/guestMiddleware')
 
 router.post('/login', mustBeGuest, login);
 

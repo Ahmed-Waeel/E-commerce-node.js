@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const { profile, update } = require('./../../Controllers/website/UsersController')
-const { mustBeAuthenticated } = require('../../Middlewares/authenticatedUser')
+const { mustBeAuthenticated } = require('./../../Middlewares/authenticatedUser')
 
 // Get User By Id
 router.get('/profile', mustBeAuthenticated,  profile);

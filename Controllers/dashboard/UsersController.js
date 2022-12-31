@@ -1,5 +1,5 @@
 // Dependencies
-const User = require('../../Models/user')
+const User = require('./../../Models/user')
 
 // Set User Status if Active or Banned
 const setStatus = async (req, res) => {

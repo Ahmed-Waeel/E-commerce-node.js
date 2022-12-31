@@ -1,7 +1,7 @@
 // Dependencies
 const { cloudinary } = require('./../../helpers/imageUploader')
-const Product = require('../../Models/product')
-const Cart = require('../../Models/cart')
+const Product = require('./../../Models/product')
+const Cart = require('./../../Models/cart')
 
 
 // Get All Products
