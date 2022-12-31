@@ -26,5 +26,5 @@ dbConnection().then(() => console.log("mongodb is connected")).catch(err => cons
 async function dbConnection() { mongoose.connect(process.env.MONGO_URL) }
 
 
-app.all('/', (req, res) => res.send({code: 200, message: "Connected"}))
+app.all('/', (req, res) => res.send({ code: 200, message: "Connected" }))
 module.exports = app

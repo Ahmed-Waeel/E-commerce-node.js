@@ -15,7 +15,6 @@ const checkQuantity = async (product_id, quantity) => {
 
 // Get All Products
 const index = async (req, res) => {
-    console.log("Hello Mother Father")
     const products = await Product.find();
 
     products.forEach(async (product_data) => {
